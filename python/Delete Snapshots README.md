@@ -14,6 +14,7 @@ OPTIONS:
   --ignore_if_newer_not_exist  don't perform deletion if there are no snapshots newer than this range [ days ] (required)
   --host  host, default : localhost
   --port  port, default : 9200
+  -h  show this message
 ```
 This will delete any snapshot that is older than than older_than days. 
 However, The script will not delete any snapshot if there are no snapshot availabe that are newer than ignore_if_newer_not_exist parameter to maintain a certain level of data retention.
