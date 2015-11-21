@@ -5,7 +5,7 @@ Create a restorable snapshot of an elasticsearch index to an exiting repository
 
 ##USAGE: 
 ``` bash 
-./elasticsearch-snapshot.py -r <repository name> [OPTIONS]
+python elasticsearch-snapshot.py -r <repository name> [OPTIONS]
 ```
 
 OPTIONS:
