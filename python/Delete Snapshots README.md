@@ -1,4 +1,4 @@
-#Delete Snapshots
+#Elasticsearch Delete Snapshots
 Delete snapshots from elasticsearch by date, with an option to skip deletion if no new snapthos would be found.
 
 ##USAGE
