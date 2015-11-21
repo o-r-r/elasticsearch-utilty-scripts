@@ -11,19 +11,19 @@ python elasticsearch-snapshot.py -r <repository name> [OPTIONS]
 OPTIONS:
 ```
   -h    Show this message
-  -r    Repository name (Required)
-  -e    Elasticsearch host (default: localhost:9200)
-  -i    Elasticsearch indices name in the multiple index syntax https://www.elastic.co/guide/en/elasticsearch/reference/current/multi-index.html (default: all available)
-  -s    Snapshot name (default: current time in %d-%m-%Y_%H:%M:%S:%3N format )
+  --repository    Repository name (required)
+  --prefix        prefix to indices filter (required)
+  --host          host, default : localhost
+  --port          port, default : 9200
 ```
 ##EXAMPLES:
 ``` bash 
-  python elasticsearch-snapshot.sh  -e "localhost:9200" -r "my_backup" -i "articles,users"
+  python elasticsearch-snapshot.py  --host "localhost" --port "9200" --repository "my_backup" --prefix "articles,users"
 ```
   This uses http://localhost:9200 to connect to elasticsearch and backs up the indices articles and users to an existing my_backup repository
   
 ``` bash 
-  python elasticsearch-snapshot.sh  -e "127.0.0.1:9200" -r "my_backup" -i "logstash*"
+  python elasticsearch-snapshot.py  -host "127.0.0.1" --repository "my_backup" --prefix "logstash*"
 ```
 
   This uses http://127.0.0.1:9200 to connect to elasticsearch and backs up
